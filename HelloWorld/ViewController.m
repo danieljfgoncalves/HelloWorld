@@ -24,4 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)showMessage {
+
+    UIAlertController *helloWorldAlert = [UIAlertController alertControllerWithTitle:@"My First App" message:@"Hello World!" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okayAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [helloWorldAlert addAction:okayAction];
+    
+    // Display the Hello World Message
+    [self presentViewController:helloWorldAlert animated:YES completion:nil];
+}
+
 @end
